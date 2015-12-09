@@ -1,8 +1,10 @@
-# grunt-galen [![npm version](https://badge.fury.io/js/grunt-galen.svg)](http://badge.fury.io/js/grunt-galen) [![Build Status](https://travis-ci.org/mjurczyk/grunt-galen.svg?branch=master)](https://travis-ci.org/mjurczyk/grunt-galen)
+# grunt-galenframework
+
+[![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework) [![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework)
 
 > Grunt plugin for [Galen](http://galenframework.com/) testing framework
 
-This module includes Galen framework downloader since version ***0.5.0*** ([Galen is also downloadable here](http://galenframework.com/download/)).
+This module downloads the GalenFramework for you
 
 *Warning* - Galen framework requires Java runtime environment to work. Java is ***not*** included in this module.
 
@@ -10,13 +12,13 @@ This module includes Galen framework downloader since version ***0.5.0*** ([Gale
 In the project directory run:
 
 ```bash
-npm install --save-dev grunt-galen
+npm install --save-dev grunt-galenframework
 ```
 
 Then add it to the Gruntfile:
 
 ```js
-grunt.loadNpmTasks('grunt-galen');
+grunt.loadNpmTasks('grunt-galenframework');
 ```
 
 # Preparing the environment
@@ -145,6 +147,18 @@ default: ***false***
 
 default: ***''***
 
+## options.testngReport
+> Set to `true`, if you wish Galen to generate testNG report for every test suite.
+
+default: ***false***
+
+## options.testngReportDest
+> Set to desired testNG report directory.
+
+default: ***''***
+
+example: ***'report/testng.xml'***
+
 ## options.seleniumGrid
 > Configuration object for a remote Selenium Grid.
 
@@ -197,7 +211,7 @@ When included, `gl.js` exposes its public interface to the test file in the glob
 ### gl
 > Main functional interface. Implements several useful functions to speed up your tests.
 
-### gl.openPage ([Object] device, [String] url [, [Object] pageElements])
+### gl.openPage ([Object] device, [String] url [, [String] url, [Object] primaryFields, [Object] secondaryFields])
 > Open target page in the browser on a target device. If page times out, test will be failed.
 
 > If pageElements is defined, Galen will attemp to fetch these elements from the webpage. 
@@ -206,7 +220,7 @@ When included, `gl.js` exposes its public interface to the test file in the glob
 
 ***url*** - a target webpage url (see also config.getProjectPage() and config.getProjectSubpage())
 
-***pageElements*** - a collection of selectors for elements needed in tests ([galen docs](http://galenframework.com/docs/reference-galen-spec-language-guide/#Objectdefinition))
+***primaryFields*** - a collection of selectors for elements needed in tests ([galen docs](http://galenframework.com/docs/reference-galen-spec-language-guide/#Objectdefinition))
 
 ### gl.runSpecFile ([Object] device, [String] file [, [Array] tags])
 > Run a test file on the target device, on the current webpage. This is what Galen is for, after all.
