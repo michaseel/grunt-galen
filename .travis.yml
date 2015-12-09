@@ -1,7 +1,10 @@
+sudo: false
 language: node_js
-node_js: 
-  - "node"
-  - "iojs"
+node_js:
+  - "0.10"
+  - "0.12"
+  - "4.0"
+  - "5.0"
 script: npm test
 before_script:
   - "export DISPLAY=:99.0"
