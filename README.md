@@ -1,8 +1,10 @@
-# grunt-galen [![npm version](https://badge.fury.io/js/grunt-galen.svg)](http://badge.fury.io/js/grunt-galen) [![Build Status](https://travis-ci.org/mjurczyk/grunt-galen.svg?branch=master)](https://travis-ci.org/mjurczyk/grunt-galen)
+# grunt-galenframework
+
+[![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework) [![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework)
 
 > Grunt plugin for [Galen](http://galenframework.com/) testing framework
 
-This module includes Galen framework downloader since version ***0.5.0*** ([Galen is also downloadable here](http://galenframework.com/download/)).
+This module downloads the GalenFramework for you
 
 *Warning* - Galen framework requires Java runtime environment to work. Java is ***not*** included in this module.
 
@@ -10,13 +12,13 @@ This module includes Galen framework downloader since version ***0.5.0*** ([Gale
 In the project directory run:
 
 ```bash
-npm install --save-dev grunt-galen
+npm install --save-dev grunt-galenframework
 ```
 
 Then add it to the Gruntfile:
 
 ```js
-grunt.loadNpmTasks('grunt-galen');
+grunt.loadNpmTasks('grunt-galenframework');
 ```
 
 # Preparing the environment
