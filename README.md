@@ -159,6 +159,11 @@ default: ***''***
 
 example: ***'report/testng.xml'***
 
+## options.parallelTests
+> Set to an positive integer if you wish Galen to run tests in parallel 
+
+default: ***1***
+
 ## options.seleniumGrid
 > Configuration object for a remote Selenium Grid.
 
