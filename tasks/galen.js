@@ -242,6 +242,7 @@ module.exports = function (grunt) {
       var testFiles = getTestingFiles();
       var htmlReport = options.htmlReport === true ? '--htmlreport ' + (options.htmlReportDest || '') : '';
       var testngReport = options.testngReport === true ? '--testngreport ' + (options.testngReportDest || '') : '';
+      var parallelTests = '--parallel-tests ' + (options.parallelTests || 1);
 
       var resultPadding = 0;
       testFiles.forEach(function (filePath) {
@@ -262,7 +263,8 @@ module.exports = function (grunt) {
             'test',
             filePath,
             htmlReport,
-            testngReport
+            testngReport,
+            parallelTests
           ].join(' ');
 
           var padding = 4;

@@ -42,6 +42,7 @@ module.exports = function (grunt) {
       sl: {
         src: ['test/**/example.test.js'],
         options: {
+          parallelTests: 3,
           seleniumGrid: {
             login: 'gruntgalen-sl',
             username: 'gruntgalen-sl',
