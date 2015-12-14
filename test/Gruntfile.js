@@ -9,14 +9,7 @@ module.exports = function (grunt) {
   var package = grunt.file.readJSON('../package.json');
   var testPipeline = ['galen:local'];
   var BUILD_ID = package.version + '_' + String((new Date()).getTime());
-  
-  /*
-   * Unless environment variable DISABLE_SAUCELABS is set to TRUE add remote testing.
-   */
-  if (process.env.DISABLE_SAUCELABS != true) {
-    testPipeline.push('galen:sl');
-  }
-  
+
   grunt.initConfig({
     galen: {
       options: {
