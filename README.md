@@ -1,8 +1,15 @@
-# grunt-galen [![npm version](https://badge.fury.io/js/grunt-galen.svg)](http://badge.fury.io/js/grunt-galen) [![Build Status](https://travis-ci.org/mjurczyk/grunt-galen.svg?branch=master)](https://travis-ci.org/mjurczyk/grunt-galen)
+# Grunt plugin for the Galenframework
+
+[Galen](http://galenframework.com) allows automated testing of look and feel for your responsive websites.
 
 > Grunt plugin for [Galen](http://galenframework.com/) testing framework
 
-This module includes Galen framework downloader since version ***0.5.0*** ([Galen is also downloadable here](http://galenframework.com/download/)).
+
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) [![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
+
+[![NPM](https://nodei.co/npm/grunt-galenframework.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/grunt-galenframework/)
+
+This module downloads the GalenFramework for you
 
 *Warning* - Galen framework requires Java runtime environment to work. Java is ***not*** included in this module.
 
@@ -10,13 +17,13 @@ This module includes Galen framework downloader since version ***0.5.0*** ([Gale
 In the project directory run:
 
 ```bash
-npm install --save-dev grunt-galen
+npm install --save-dev grunt-galenframework
 ```
 
 Then add it to the Gruntfile:
 
 ```js
-grunt.loadNpmTasks('grunt-galen');
+grunt.loadNpmTasks('grunt-galenframework');
 ```
 
 # Preparing the environment
@@ -166,6 +173,11 @@ default: ***false***
 default: ***''***
 
 example: ***'report/testng.xml'***
+
+## options.parallelTests
+> Set to an positive integer if you wish Galen to run tests in parallel 
+
+default: ***1***
 
 ## options.seleniumGrid
 > Configuration object for a remote Selenium Grid.
