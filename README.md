@@ -1,8 +1,13 @@
-# grunt-galenframework
+# Grunt plugin for the Galenframework
 
-[![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework) [![Build Status](https://travis-ci.org/hypery2k/grunt-galenframework.svg?branch=master)](https://travis-ci.org/hypery2k/grunt-galenframework)
+[Galen](http://galenframework.com) allows automated testing of look and feel for your responsive websites.
 
 > Grunt plugin for [Galen](http://galenframework.com/) testing framework
+
+
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE) [![npm version](https://badge.fury.io/js/grunt-galenframework.svg)](http://badge.fury.io/js/grunt-galenframework)
+
+[![NPM](https://nodei.co/npm/grunt-galenframework.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/grunt-galenframework/)
 
 This module downloads the GalenFramework for you
 
