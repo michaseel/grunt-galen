@@ -5,6 +5,8 @@ node_js:
   - "0.12"
   - "4.0"
   - "5.0"
+env:
+- DISABLE_SAUCELABS=true
 script: npm test
 before_script:
   - "export DISPLAY=:99.0"
