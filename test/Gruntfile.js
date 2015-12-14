@@ -4,6 +4,8 @@ module.exports = function (grunt) {
    * of the framework to launch the dynamic test example.
    * 
    */
+  var sauceUser = 'galen_mreinhardt';
+  var sauceKey = 'aff16b42-9c23-4cb6-adf7-38da9e02193a';
   var package = grunt.file.readJSON('../package.json');
   var testPipeline = ['galen:local'];
   var BUILD_ID = package.version + '_' + String((new Date()).getTime());
@@ -44,9 +46,9 @@ module.exports = function (grunt) {
         options: {
           parallelTests: 3,
           seleniumGrid: {
-            login: 'gruntgalen-sl',
-            username: 'gruntgalen-sl',
-            accessKey: '5fa3a9f6-a912-4294-b254-6041410702f5'
+            login: sauceUser,
+            username: sauceUser,
+            accessKey: sauceKey
           },
           devices: {
             desktop: {
